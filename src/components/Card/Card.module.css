@@ -1,0 +1,27 @@
+.card {
+  background: var(--color-background-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.card__description {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.card__link {
+  color: var(--color-primary);
+  font-weight: 500;
+}

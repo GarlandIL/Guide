@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --color-primary: #005ea5;
+  --color-primary-dark: #003d6b;
+  --color-secondary: #f3f2f1;
+  --color-text: #0b0c0c;
+  --color-text-light: #505a5f;
+  --color-background: #ffffff;
+  --color-background-alt: #f8f8f8;
+  --color-border: #b1b4b6;
+  --color-error: #d4351c;
+  --color-success: #00703c;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+
+  /* Typography */
+  --font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+
+  /* Border radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark theme – override variables */
+[data-theme="dark"] {
+  --color-text: #ffffff;
+  --color-text-light: #c7c9cb;
+  --color-background: #1a1a1a;
+  --color-background-alt: #2a2a2a;
+  --color-border: #444444;
+  --color-secondary: #2e2e2e;
+}

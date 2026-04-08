@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "Waste Collection",
+      "description": "Find your bin collection day and report missed collections.",
+      "contact": "waste@local.gov.uk",
+      "hours": "Mon-Fri 9am-5pm"
+    },
+    {
+      "id": 2,
+      "name": "Library Services",
+      "description": "Search the catalogue, renew books, and find opening hours.",
+      "contact": "libraries@local.gov.uk",
+      "hours": "Mon-Sat 10am-6pm"
+    },
+    {
+      "id": 3,
+      "name": "Council Tax",
+      "description": "View your bill, set up payment, and apply for discounts.",
+      "contact": "counciltax@local.gov.uk",
+      "hours": "Mon-Thu 9am-4pm"
+    },
+    {
+      "id": 4,
+      "name": "Parking Permits",
+      "description": "Apply for resident or visitor parking permits online.",
+      "contact": "parking@local.gov.uk",
+      "hours": "Mon-Fri 8am-6pm"
+    }
+  ]
+}
