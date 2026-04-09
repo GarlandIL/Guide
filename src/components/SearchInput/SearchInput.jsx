@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import styles from './SearchInput.module.css';
 
-export const SearchInput = ({ onSearch, placeholder = 'Search services...' }) => {
+export const SearchInput = ({ onSearch, placeholder = 'Search services...', resultCount = null }) => {
   const [value, setValue] = useState('');
 
   useEffect(() => {
     const timer = setTimeout(() => {
       onSearch(value);
-    }, 300); // debounce
-
+    }, 300);
     return () => clearTimeout(timer);
   }, [value, onSearch]);
 
@@ -27,7 +26,11 @@ export const SearchInput = ({ onSearch, placeholder = 'Search services...' }) =>
         aria-describedby="search-status"
       />
       <div id="search-status" className="visually-hidden" aria-live="polite">
-        {value && `Showing results for ${value}`}
+        {value && (
+          resultCount !== null
+            ? `${resultCount} result${resultCount !== 1 ? 's' : ''} found for ${value}`
+            : `Searching for ${value}...`
+        )}
       </div>
     </div>
   );

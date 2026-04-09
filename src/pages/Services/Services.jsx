@@ -10,6 +10,7 @@ export default function Services() {
   const [filteredServices, setFilteredServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const resultCount = filteredServices.length;
 
   useEffect(() => {
     fetchAllServices()
@@ -43,7 +44,7 @@ export default function Services() {
   return (
     <div className="container">
       <h1>All services</h1>
-      <SearchInput onSearch={handleSearch} />
+      <SearchInput onSearch={handleSearch} resultCount={resultCount} />
       <div className={styles.cardGrid}>
         {filteredServices.map(service => (
           <Card
