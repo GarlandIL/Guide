@@ -7,7 +7,10 @@ export default function Home() {
     <div className="container">
       <div className={styles.hero}>
         <h1>Welcome to GovGuide</h1>
-        <p>Your local council services, simplified. Find information on waste collection, libraries, council tax, and more.</p>
+        <p>
+          Your local council services, simplified. Find information on waste collection, libraries,
+          council tax, and more.
+        </p>
         <Link to="/services">
           <Button variant="primary">Browse all services</Button>
         </Link>

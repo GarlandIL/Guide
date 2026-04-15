@@ -41,10 +41,14 @@ export default function ServiceDetail() {
         ← Back to all services
       </Button>
       <div className={styles.detail}>
-        <h1 tabIndex={-1} ref={headingRef}>{service.name}</h1>
+        <h1 tabIndex={-1} ref={headingRef}>
+          {service.name}
+        </h1>
         <p>{service.description}</p>
         <h2>Contact</h2>
-        <p><a href={`mailto:${service.contact}`}>{service.contact}</a></p>
+        <p>
+          <a href={`mailto:${service.contact}`}>{service.contact}</a>
+        </p>
         <h2>Opening hours</h2>
         <p>{service.hours}</p>
       </div>

@@ -1,6 +1,12 @@
 import styles from './Card.module.css';
 
-export const Card = ({ title, description, linkTo, linkText = 'Learn more', headingLevel = 'h2' }) => {
+export const Card = ({
+  title,
+  description,
+  linkTo,
+  linkText = 'Learn more',
+  headingLevel = 'h2',
+}) => {
   const HeadingTag = headingLevel;
   return (
     <article className={styles.card}>

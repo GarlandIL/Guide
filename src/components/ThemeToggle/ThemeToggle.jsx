@@ -15,12 +15,12 @@ export const ThemeToggle = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
 
   return (
-    <button 
-      onClick={toggleTheme} 
+    <button
+      onClick={toggleTheme}
       className={styles.toggle}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >

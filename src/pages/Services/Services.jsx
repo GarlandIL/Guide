@@ -25,14 +25,15 @@ export default function Services() {
       });
   }, []);
 
-  const handleSearch = (query) => {
+  const handleSearch = query => {
     if (!query.trim()) {
       setFilteredServices(allServices);
     } else {
       const lowerQuery = query.toLowerCase();
-      const filtered = allServices.filter(service =>
-        service.name.toLowerCase().includes(lowerQuery) ||
-        service.description.toLowerCase().includes(lowerQuery)
+      const filtered = allServices.filter(
+        service =>
+          service.name.toLowerCase().includes(lowerQuery) ||
+          service.description.toLowerCase().includes(lowerQuery)
       );
       setFilteredServices(filtered);
     }
@@ -56,9 +57,7 @@ export default function Services() {
           />
         ))}
       </div>
-      {filteredServices.length === 0 && (
-        <p>No services match your search.</p>
-      )}
+      {filteredServices.length === 0 && <p>No services match your search.</p>}
     </div>
   );
 }
