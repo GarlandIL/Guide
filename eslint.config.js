@@ -1,9 +1,9 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import { defineConfig, globalIgnores } from 'eslint/config'
-import vitest from 'eslint-plugin-vitest'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import vitest from 'eslint-plugin-vitest';
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -21,7 +21,7 @@ export default defineConfig([
         ...globals.browser,
         ...globals.node,
         // This line tells ESLint that describe, it, expect, vi are valid
-        ...vitest.environments.env.globals, 
+        ...vitest.environments.env.globals,
       },
       parserOptions: {
         ecmaVersion: 'latest',
@@ -32,11 +32,9 @@ export default defineConfig([
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },
-])
+]);

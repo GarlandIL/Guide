@@ -12,8 +12,12 @@ export const Header = () => {
           </Link>
           <nav aria-label="Main navigation">
             <ul className={styles.nav}>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/services">Services</Link></li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/services">Services</Link>
+              </li>
             </ul>
           </nav>
           <ThemeToggle />

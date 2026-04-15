@@ -3,7 +3,6 @@ import userEvent from '@testing-library/user-event';
 import { Button } from './Button';
 import { axe } from 'jest-axe';
 
-
 describe('Button component', () => {
   it('renders children correctly', () => {
     render(<Button>Click me</Button>);
@@ -37,7 +36,11 @@ describe('Button component', () => {
 
   it('does not call onClick when disabled', async () => {
     const handleClick = vi.fn();
-    render(<Button disabled onClick={handleClick}>Click</Button>);
+    render(
+      <Button disabled onClick={handleClick}>
+        Click
+      </Button>
+    );
     await userEvent.click(screen.getByRole('button'));
     expect(handleClick).not.toHaveBeenCalled();
   });

@@ -6,7 +6,7 @@ describe('Card component', () => {
     title: 'Waste Collection',
     description: 'Find your bin collection day',
     linkTo: '/services/1',
-    linkText: 'View details'
+    linkText: 'View details',
   };
 
   it('renders title and description', () => {

@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     // Vite 8 built-in support for tsconfig paths (if you use them)
-    tsconfigPaths: true 
+    tsconfigPaths: true,
   },
   test: {
     globals: true,
@@ -13,15 +13,15 @@ export default defineConfig({
     setupFiles: './src/test/setup.js',
     css: {
       modules: {
-        classNameStrategy: 'non-scoped' // keeps original class names in tests
-      }
+        classNameStrategy: 'non-scoped', // keeps original class names in tests
+      },
     },
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
     },
     server: {
-      forwardConsole: true 
-    }
+      forwardConsole: true,
+    },
   },
-})
+});

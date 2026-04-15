@@ -9,7 +9,7 @@ vi.mock('../../services/api');
 describe('Services page accessibility', () => {
   it('should have no accessibility violations', async () => {
     fetchAllServices.mockResolvedValue([
-      { id: 1, name: 'Test Service', description: 'Test description' }
+      { id: 1, name: 'Test Service', description: 'Test description' },
     ]);
 
     const { container } = render(
